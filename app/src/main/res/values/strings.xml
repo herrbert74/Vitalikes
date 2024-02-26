@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Vitalikes</string>
+    <string name="no_search_result">Your search did not return any tokens. Please try another one</string>
+    <string name="search_prompt">Search for an ERC20 token</string>
+</resources>
