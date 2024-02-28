@@ -92,3 +92,11 @@ network is fully mocked.
 * Bug fixing: 2 hours
 * Writing readme: 1 hour
 * Altogether: circa 14 hours
+
+## Where would I store a private key
+
+Private keys in Android should be stored in with the Android Keystore provider, which is available since API level 
+18, so can be used on all devices nowadays. 
+
+For additional security on API level 28 and newer one can use the hardware security module to import secure keys, 
+which makes sure that the sensitive information will never be loaded into the device memory.
