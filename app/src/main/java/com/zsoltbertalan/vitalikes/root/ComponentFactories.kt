@@ -1,7 +1,7 @@
 package com.zsoltbertalan.vitalikes.root
 
 import com.zsoltbertalan.vitalikes.domain.api.VitalikesRepository
-import com.zsoltbertalan.vitalikes.ui.tokenBalancedetails.IntroComponent
+import com.zsoltbertalan.vitalikes.ui.intro.IntroComponent
 import com.zsoltbertalan.vitalikes.ui.tokens.TokensComponent
 import com.zsoltbertalan.vitalikes.ui.tokens.TokensExecutor
 import kotlinx.coroutines.CoroutineDispatcher

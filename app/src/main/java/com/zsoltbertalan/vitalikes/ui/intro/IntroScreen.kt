@@ -1,4 +1,4 @@
-package com.zsoltbertalan.vitalikes.ui.tokenBalancedetails
+package com.zsoltbertalan.vitalikes.ui.intro
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Column

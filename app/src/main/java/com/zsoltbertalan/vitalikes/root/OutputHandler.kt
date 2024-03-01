@@ -3,7 +3,7 @@ package com.zsoltbertalan.vitalikes.root
 import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.decompose.router.stack.pop
 import com.arkivanov.decompose.router.stack.push
-import com.zsoltbertalan.vitalikes.ui.tokenBalancedetails.IntroComp
+import com.zsoltbertalan.vitalikes.ui.intro.IntroComp
 import com.zsoltbertalan.vitalikes.ui.tokens.TokensComp
 
 val navigation = StackNavigation<Configuration>()

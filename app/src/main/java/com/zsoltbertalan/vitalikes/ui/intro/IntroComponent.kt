@@ -1,4 +1,4 @@
-package com.zsoltbertalan.vitalikes.ui.tokenBalancedetails
+package com.zsoltbertalan.vitalikes.ui.intro
 
 import com.arkivanov.decompose.ComponentContext
 import com.zsoltbertalan.vitalikes.di.MainDispatcher

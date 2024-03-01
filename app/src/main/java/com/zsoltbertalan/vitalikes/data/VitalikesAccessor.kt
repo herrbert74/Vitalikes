@@ -96,7 +96,7 @@ class VitalikesAccessor(
 				list
 					.filter { token -> token.symbol.contains(searchQuery, true) }
 					.map { dbo -> dbo.toToken().toTokenBalance() }
-					.filterNot { token -> token.balance.startsWith(INVALID_DIGITS) }
+					.filterNot { token -> token.balanceString.startsWith(INVALID_DIGITS) }
 			}
 	}
 

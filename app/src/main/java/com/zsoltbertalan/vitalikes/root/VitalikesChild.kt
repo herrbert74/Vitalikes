@@ -1,6 +1,6 @@
 package com.zsoltbertalan.vitalikes.root
 
-import com.zsoltbertalan.vitalikes.ui.tokenBalancedetails.IntroComp
+import com.zsoltbertalan.vitalikes.ui.intro.IntroComp
 import com.zsoltbertalan.vitalikes.ui.tokens.TokensComp
 
 sealed class VitalikesChild {

@@ -10,10 +10,10 @@ object TokenMother {
 
 	fun createTokenList() = listOf(
 		createDefaultToken("USDC", "0xdac17f958d2ee523a2206206994597c13d831ec7", "USD Coin", "6", result =
-		"8910442234"),
+		"1818872440674356221452"),
 		createDefaultToken("USDT", "0xdac17f958d2ee523a2206206994597c13d831ec7", "Tether USD", "18", result = "100000"),
 		createDefaultToken("USDE", "0xdac17f958d2ee523a2206206994597c13d831ec7", "Ethena USDe", "18", result =
-		"100000"),
+		"0"),
 	)
 }
 

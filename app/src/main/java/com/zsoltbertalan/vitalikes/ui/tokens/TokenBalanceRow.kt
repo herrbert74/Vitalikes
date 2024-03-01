@@ -6,11 +6,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import com.babestudios.base.compose.design.smallDimensions
 import com.zsoltbertalan.vitalikes.design.VitalikesTheme
 import com.zsoltbertalan.vitalikes.design.VitalikesTypography
 import com.zsoltbertalan.vitalikes.domain.model.TokenBalance
+import java.math.BigDecimal
 
 @Composable
 fun TokenBalanceRow(tokenBalance: TokenBalance) {
@@ -33,8 +35,9 @@ fun TokenBalanceRow(tokenBalance: TokenBalance) {
 		)
 
 		Text(
-			text = tokenBalance.balance,
+			text = tokenBalance.balanceString,
 			style = VitalikesTypography.bodyMedium,
+			color = if(tokenBalance.balance == BigDecimal.ZERO) Color.Red else Color(2,82,2),
 			modifier = Modifier.weight(1.0f)
 				.padding(
 					top = smallDimensions.marginNormal,

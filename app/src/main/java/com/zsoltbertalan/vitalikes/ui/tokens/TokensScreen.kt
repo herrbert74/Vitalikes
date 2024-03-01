@@ -41,6 +41,7 @@ import com.arkivanov.decompose.extensions.compose.jetbrains.subscribeAsState
 import com.zsoltbertalan.vitalikes.R
 import com.zsoltbertalan.vitalikes.design.Colors
 import com.zsoltbertalan.vitalikes.design.Dimens
+import com.zsoltbertalan.vitalikes.design.VitalikesTheme
 import com.zsoltbertalan.vitalikes.design.VitalikesTypography
 import com.zsoltbertalan.vitalikes.design.titleLargeBold
 import com.zsoltbertalan.vitalikes.testhelper.TokenBalanceMother
@@ -215,19 +216,21 @@ private fun ErrorView(innerPadding: PaddingValues) {
 @Preview
 @Composable
 fun TokensScreenPreview() {
-	TokenSearchResultList(
-		TokenBalanceMother.createTokenBalanceList()
-	)
+	VitalikesTheme {
+		TokenSearchResultList(
+			TokenBalanceMother.createTokenBalanceList()
+		)
+	}
 }
 
 @Preview
 @Composable
 fun EmptySearchListPreview() {
-	EmptySearchList(PaddingValues())
+	VitalikesTheme { EmptySearchList(PaddingValues()) }
 }
 
 @Preview
 @Composable
 fun TokensScreenErrorPreview() {
-	ErrorView(PaddingValues())
+	VitalikesTheme { ErrorView(PaddingValues()) }
 }

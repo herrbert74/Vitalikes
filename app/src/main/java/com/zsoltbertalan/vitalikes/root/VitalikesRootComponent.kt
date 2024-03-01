@@ -8,7 +8,7 @@ import com.arkivanov.decompose.value.Value
 import com.zsoltbertalan.vitalikes.domain.api.VitalikesRepository
 import com.zsoltbertalan.vitalikes.di.IoDispatcher
 import com.zsoltbertalan.vitalikes.di.MainDispatcher
-import com.zsoltbertalan.vitalikes.ui.tokenBalancedetails.IntroComp
+import com.zsoltbertalan.vitalikes.ui.intro.IntroComp
 import com.zsoltbertalan.vitalikes.ui.tokens.TokensComp
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.FlowCollector

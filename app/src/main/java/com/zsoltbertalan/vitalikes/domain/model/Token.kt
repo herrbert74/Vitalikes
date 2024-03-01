@@ -1,5 +1,6 @@
 package com.zsoltbertalan.vitalikes.domain.model
 
+import java.math.BigDecimal
 import kotlin.math.pow
 
 /**
@@ -17,7 +18,8 @@ data class Token(
 
 fun Token.toTokenBalance() = TokenBalance(
 	label = "$symbol Balance:",
-	balance = "${getBalanceAmount(result, decimals)} $symbol",
+	balance = this.result.toBigDecimalOrNull() ?: BigDecimal.ZERO,
+	balanceString = "${getBalanceAmount(result, decimals)} $symbol",
 )
 
 const val INVALID_DIGITS = "%INVALID%"

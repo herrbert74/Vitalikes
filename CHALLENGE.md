@@ -13,8 +13,7 @@ Please also complete the questions at the end of this document.
 
 ### Intro Screen:
 
-* Just display the given Ethereum wallet address, no need for any calculations
-here
+* Just display the given Ethereum wallet address, no need for any calculations here
 * Show a button to navigate to the 2nd screen
 Note that the Ethereum address will be hardcoded in the app; The user won’t
 be able to change it.

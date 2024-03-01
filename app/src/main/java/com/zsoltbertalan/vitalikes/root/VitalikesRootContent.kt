@@ -5,7 +5,7 @@ import com.arkivanov.decompose.extensions.compose.jetbrains.stack.Children
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.scale
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.stackAnimation
 import com.zsoltbertalan.vitalikes.design.VitalikesTheme
-import com.zsoltbertalan.vitalikes.ui.tokenBalancedetails.IntroScreen
+import com.zsoltbertalan.vitalikes.ui.intro.IntroScreen
 import com.zsoltbertalan.vitalikes.ui.tokens.TokensScreen
 
 @Composable
