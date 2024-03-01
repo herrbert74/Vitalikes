@@ -1,5 +1,10 @@
 # Vitalikes
-Test Challenge using Ethplorer and Etherscan apis
+
+Test Challenge using Ethplorer and Etherscan apis. 
+
+[Challenge description](CHALLENGE.md)
+
+[Challenge feedback](FEEDBACK.md)
 
 # Remarks from Zsolt Bertalan
 
