@@ -38,8 +38,7 @@
     separate domain and presentation classes before, and I would consider this premature optimization for this project.
 * Storage - storage is basically useless, as it's not used in offline mode, errors are still shown on UI even if we 
   have the data, it's just treated as a source of truth - could have as well been just a cache in
-  * That is not true for the top tokens call, and as I mentioned in the readme, I had no time to do that for the 
-    balances.
+  * I did that for the top tokens, but I ran out of time to do that for the balances, which failed the whole caching.
 * Other design issues - duplicated logic that can lead to bugs (filtering of tokens), same logic in UI and 
   presentation layer (checking for min of 2 characters)
   * This logic is not duplicated, only the same check was used for different purposes. The check in the ui might be 
