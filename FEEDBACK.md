@@ -15,14 +15,14 @@
   * Fixed. Cancelling WAS done, debouncing and trimming was indeed missing
 * Missed tokens - if the balance wasn't fetch, the user doesn't see the token
   * This is only an issue if there is no data in the database, and there is no network connection. Fixing this would 
-    need a complete rewrite of the getTokens function. This was not feasible for this test challenge as it was written.
+    need a complete rewrite of the getTokens function. This was not feasible the way it was written.
 * Missing requirement for green / red balances
   * Fixed
 * A lot of UI blinking when typing (e.g. wet -> weth)
   * That's just a duplication of the Search and Compose issues above and below (?)
 * Compose issues - many redundant recompositions - not using stable types, no ImmutableList usage, using hashcode of 
   token as a `key` - so if balance changes the same view won't be reused
-  * Useful feedback, my Compose knowledge is (was :) ) limited due to only have used it in hobby projects.
+  * Fixed. Useful feedback, my Compose knowledge is (was? :) ) limited due to only have used it in hobby projects.
 * Coroutine issue #1 - broken main-safety rule - (all method should be safe to be called on main-thread and dispatcher 
   changes should be done in places that know they need to offload some work (e.g. `TokenDao#getTokens`)
   * That's something I should consider in the future, but it's not a coroutine problem, but an architecture 
@@ -34,8 +34,8 @@
     lifecycle-aware.
 * Incorrect domain modeling - `Token` including `balance`, Balance represent as a string in a domain model, 
   hardcoded label text exposed from domain layer
-  * This has some merit, and the project is already more complex than it needs to be, but I never had separate domain 
-    and presentation classes before, and I would consider this premature optimization for this project.
+  * This has some merit, however... The project is already more complex than it needs to be, but I never have had 
+    separate domain and presentation classes before, and I would consider this premature optimization for this project.
 * Storage - storage is basically useless, as it's not used in offline mode, errors are still shown on UI even if we 
   have the data, it's just treated as a source of truth - could have as well been just a cache in
   * That is not true for the top tokens call, and as I mentioned in the readme, I had no time to do that for the 
@@ -43,4 +43,4 @@
 * Other design issues - duplicated logic that can lead to bugs (filtering of tokens), same logic in UI and 
   presentation layer (checking for min of 2 characters)
   * This logic is not duplicated, only the same check was used for different purposes. The check in the ui might be 
-    offloaded to the Executor or reducer?!
+    offloaded to the Executor or Reducer?!
