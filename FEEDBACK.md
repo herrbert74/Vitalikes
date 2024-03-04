@@ -30,7 +30,8 @@
 * Coroutine issue #2 - many unnecessary updates due to not using `distinctUntilChanged`, creating empty coroutine 
   scopes that are never cancelled
   * The 'distinctUntilChanged' function is not needed, because state.subscribeAsState() already handles that. Not sure 
-    where the empty coroutine scopes are, probably MVIKotlin scope was mistaken for it.
+    where the empty coroutine scopes are, probably MVIKotlin scope was mistaken for it. That's not empty, and it's 
+    lifecycle-aware.
 * Incorrect domain modeling - `Token` including `balance`, Balance represent as a string in a domain model, 
   hardcoded label text exposed from domain layer
   * This has some merit, and the project is already more complex than it needs to be, but I never had separate domain 

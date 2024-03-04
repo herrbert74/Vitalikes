@@ -96,6 +96,7 @@ dependencies {
 	implementation(libs.decompose.extensionsJetBrains)
 	implementation(libs.kotlinResult.result)
 	implementation(libs.kotlinResult.coroutines)
+	implementation(libs.kotlinx.collections.immutable.jvm)
 	implementation(libs.mvikotlin.core)
 	implementation(libs.mvikotlin.coroutines)
 	implementation(libs.mvikotlin.main)

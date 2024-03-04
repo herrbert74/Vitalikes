@@ -14,9 +14,7 @@ import com.babestudios.base.compose.simpleVerticalScrollbar
 import com.zsoltbertalan.vitalikes.domain.model.TokenBalance
 
 @Composable
-fun TokenSearchResultList(
-	items: List<TokenBalance>
-) {
+fun TokenSearchResultList(items: List<TokenBalance>) {
 
 	val backgroundColor =
 		if (items.isEmpty()) colorResource(android.R.color.transparent)
@@ -38,7 +36,7 @@ fun TokenSearchResultList(
 		) {
 			items(
 				items = items,
-				key = { item -> item.hashCode() },
+				key = { item -> item.label },
 				itemContent = { tokenBalance ->
 					TokenBalanceRow(tokenBalance)
 					HorizontalDivider()

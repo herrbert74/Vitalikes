@@ -8,6 +8,7 @@ import com.arkivanov.mvikotlin.extensions.coroutines.CoroutineBootstrapper
 import com.zsoltbertalan.vitalikes.domain.model.TokenBalance
 import com.zsoltbertalan.vitalikes.ui.tokens.TokensStore.Intent
 import com.zsoltbertalan.vitalikes.ui.tokens.TokensStore.State
+import kotlinx.collections.immutable.toImmutableList
 
 class TokensStoreFactory(
 	private val storeFactory: StoreFactory,
@@ -37,9 +38,18 @@ class TokensStoreFactory(
 	private object TokensReducer : Reducer<State, Message> {
 		override fun State.reduce(msg: Message): State =
 			when (msg) {
-				Message.ShowLoading -> copy(isLoading = true, tokens = emptyList(), error = null)
-				is Message.ShowTokens -> copy(isLoading = false, tokens = msg.tokens, error = null)
-				is Message.ShowError -> copy(isLoading = false, tokens = emptyList(), error = msg.throwable)
+				Message.ShowLoading -> copy(
+					isLoading = true,
+					tokens = listOf<TokenBalance>().toImmutableList(),
+					error = null
+				)
+
+				is Message.ShowTokens -> copy(isLoading = false, tokens = msg.tokens.toImmutableList(), error = null)
+				is Message.ShowError -> copy(
+					isLoading = false,
+					tokens = listOf<TokenBalance>().toImmutableList(),
+					error = msg.throwable
+				)
 			}
 	}
 
